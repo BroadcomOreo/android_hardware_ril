@@ -28,5 +28,21 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE:= rild
 LOCAL_INIT_RC := rild.rc
 
+# For radiooptions binary
+# =======================
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:= \
+	radiooptions.c
+
+LOCAL_SHARED_LIBRARIES := \
+	liblog \
+	libcutils \
+
+LOCAL_CFLAGS := \
+
+LOCAL_MODULE:= radiooptions
+LOCAL_MODULE_TAGS := debug
+
 include $(BUILD_EXECUTABLE)
 
